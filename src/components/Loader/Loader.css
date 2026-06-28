@@ -1,0 +1,55 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 3rem;
+}
+
+.loader-container.small {
+  padding: 0.5rem;
+}
+
+.loader-container.small .loader-spinner {
+  width: 22px;
+  height: 22px;
+}
+
+.loader-container.large .loader-spinner {
+  width: 56px;
+  height: 56px;
+}
+
+.loader-spinner {
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.loader-spinner::before,
+.loader-spinner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.loader-spinner::before {
+  border-top-color: var(--primary);
+  animation: spin 0.85s ease-in-out infinite;
+}
+
+.loader-spinner::after {
+  border-bottom-color: var(--accent);
+  animation: spin 0.85s ease-in-out infinite reverse;
+  inset: 4px;
+}
+
+.loader-text {
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}

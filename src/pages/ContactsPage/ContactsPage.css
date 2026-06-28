@@ -1,0 +1,135 @@
+.contacts-page {
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+.cp-decor {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.4;
+}
+.cp-decor-1 {
+  width: 400px; height: 400px;
+  background: rgba(124, 58, 237, 0.1);
+  top: -100px; right: -80px;
+}
+.cp-decor-2 {
+  width: 300px; height: 300px;
+  background: rgba(244, 114, 182, 0.08);
+  bottom: -80px; left: -60px;
+}
+
+/* ── Header ──────────────────────────────────────── */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 0.925rem;
+}
+
+.page-stats {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.stat-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.stat-number {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.675rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.125rem;
+}
+
+/* ── Layout ──────────────────────────────────────── */
+.contacts-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.contacts-sidebar {
+  position: sticky;
+  top: 90px;
+}
+
+.contacts-main {
+  min-height: 300px;
+}
+
+/* ── Error card ──────────────────────────────────── */
+.error-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.25rem;
+}
+
+.error-card p {
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.inline-loader {
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .contacts-layout {
+    grid-template-columns: 1fr;
+  }
+  .contacts-sidebar {
+    position: static;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
