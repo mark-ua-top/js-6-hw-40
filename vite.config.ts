@@ -19,9 +19,12 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
+    // Дозволяє доступ з інших пристроїв в локальній мережі
+    host: true,
   },
   preview: {
     port: 3000,
+    host: true,
   },
   build: {
     outDir: "dist",
